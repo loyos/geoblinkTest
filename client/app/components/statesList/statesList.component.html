@@ -1,2 +1,8 @@
 <h1>Geoblink Frontend Exercise</h1>
-<p><pre>states = {{ statesListController.states }}</pre></p>
+<br>
+<li class="list-group-item active"> States: </li>
+<div ng-if="statesListController.loading"> <img src="../../../assets/img/loading.gif" width="200px;" alt="loading"> </div>
+<div ng-if="statesListController.showError" class="error"> Apparently a bomb caused all states disappear, maybe try again?? </div>
+<ul class="list-group" ng-if="!statesListController.loading">
+    <li class="list-group-item" ng-repeat=" state in statesListController.statesArray"> Name: {{ state.fullName }} -- Short Name: {{state.shortName}}</li>
+</ul>

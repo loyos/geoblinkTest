@@ -1,3 +1,15 @@
 h1 {
   font-weight: normal;
 }
+
+.list-group{
+  height: 300px;
+  margin-bottom: 10px;
+  overflow:scroll;
+  overflow-x: hidden;
+}
+
+.error{
+  margin: 20px;
+  font-size: 20px;
+}
